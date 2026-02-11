@@ -1,25 +1,37 @@
-import { useState } from 'react';
-import { Utensils, ShoppingCart, FileText, Bell, CreditCard, LogOut, User } from 'lucide-react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from './components/ui/tabs';
-import { Button } from './components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './components/ui/card';
-import { Toaster } from './components/ui/sonner';
-import { toast } from 'sonner';
-import { AgeVerification } from './components/age-verification';
-import { Login } from './components/login';
-import { CustomerMenuView } from './components/customer-menu-view';
-import { CustomerOrderView } from './components/customer-order-view';
-import { WaiterCall } from './components/waiter-call';
-import { PaymentSystem, PaymentMethod } from './components/payment-system';
-import { MenuItem } from './components/menu-management';
+"use client";
 
-// Import do sistema administrativo
-import { MenuManagement } from './components/menu-management';
-import { OrderManagement, Order } from './components/order-management';
-import { ReservationSystem, Reservation } from './components/reservation-system';
-import { EmployeeManagement, Employee } from './components/employee-management';
-import { TableQRCode } from './components/table-qrcode';
-import { ClipboardList, Calendar, Users, QrCode } from 'lucide-react';
+import { useState } from "react";
+import {
+  Utensils,
+  LogOut,
+  FileText,
+  Bell,
+  CreditCard,
+  ShoppingCart,
+  ClipboardList,
+  Calendar,
+  User,
+  QrCode,
+  Users,
+} from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/app/components/ui/tabs";
+import { Button } from "@/app/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/app/components/ui/card";
+import { Toaster } from "@/app/components/ui/sonner";
+import { toast } from "sonner";
+
+import { AgeVerification } from "@/app/components/age-verification";
+import { Login } from "@/app/components/login";
+import { CustomerMenuView } from "@/app/components/customer-menu-view";
+import { CustomerOrderView } from "@/app/components/customer-order-view";
+import { WaiterCall } from "@/app/components/waiter-call";
+import { PaymentSystem, PaymentMethod } from "@/app/components/payment-system";
+import { MenuItem, MenuManagement } from "@/app/components/menu-management";
+import { OrderManagement, Order } from "@/app/components/order-management";
+import { ReservationSystem, Reservation } from "@/app/components/reservation-system";
+import { EmployeeManagement, Employee } from "@/app/components/employee-management";
+import { TableQRCode } from "@/app/components/table-qrcode";
+
 
 interface CartItem {
   item: MenuItem;

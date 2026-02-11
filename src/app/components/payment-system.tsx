@@ -81,7 +81,7 @@ export function PaymentSystem({ amount, orderId, onPaymentComplete, open, onOpen
         <div className="space-y-6 py-4">
           <div>
             <Label className="text-base mb-3 block">Forma de Pagamento</Label>
-            <RadioGroup value={selectedMethod} onValueChange={(value) => setSelectedMethod(value as PaymentMethod)}>
+            <RadioGroup value={selectedMethod} onValueChange={(value: PaymentMethod) => setSelectedMethod(value)} >
               <div className="grid grid-cols-2 gap-4">
                 {paymentMethods.map((method) => {
                   const Icon = method.icon;
